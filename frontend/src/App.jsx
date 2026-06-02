@@ -21,6 +21,7 @@ function App() {
     const [user, setUser] = useState(null);
     const [filters, setFilters] = useState({ category: 'all', material: 'all', purpose: 'all' });
     const [users, setUsers] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState(null);
 
     useEffect(() => {
         loadProducts();
@@ -161,8 +162,50 @@ function App() {
         }
     };
 
-    if (!user) {
-        return <AuthForm onLogin={handleLogin} onRegister={handleRegister} />;
+    if (!user) return <AuthForm onLogin={handleLogin} onRegister={handleRegister} />;
+    
+    if (selectedProduct) {
+        return (
+            <div className="app">
+                <header>
+                    <h1>🏴‍☠️ Магазин «На мели»</h1>
+                    <button onClick={() => setSelectedProduct(null)}> ← Вернуться в каталог</button>
+                </header>
+                <div className="product-page">
+                    <img
+                        className="product-page-image"
+                        src={`http://localhost/БИВТ-24-8_Петрова_Д.С._19_Корабль/pictures/${selectedProduct.image}`}
+                        alt={selectedProduct.name}
+                    />
+                    <div className="product-info">
+                        <h2>{selectedProduct.name}</h2>
+                        <p className="product-description-full">
+                            {selectedProduct.description}
+                        </p>
+                        <div className="big-price">
+                            {selectedProduct.price} ₽
+                        </div>
+                        <p>
+                            <strong>Материал:</strong>{" "}
+                            {selectedProduct.material || "—"}
+                        </p>
+                        <p>
+                            <strong>Категория:</strong>{" "}
+                            {selectedProduct.category}
+                        </p>
+                        <p>
+                            <strong>Статус:</strong>{" "}
+                            {selectedProduct.inStock
+                                ? "В наличии"
+                                : "Нет в наличии"}
+                        </p>
+                        {selectedProduct.inStock && user.role !== 'admin' && (
+                                <button onClick={() => addToCart(selectedProduct)}>Добавить в корзину</button>
+                            )}
+                    </div>
+                </div>
+            </div>
+        );
     }
 
     return (
@@ -214,6 +257,7 @@ function App() {
                                 onAddToCart={addToCart}
                                 isAdmin={user?.role === 'admin'}
                                 onToggleStock={handleToggleStock}
+                                onViewDetails={setSelectedProduct}
                             />
                         ))}
                     </div>

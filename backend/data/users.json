@@ -22,5 +22,13 @@
         "age": null,
         "password": "$2y$10$psW5diuR9l1WTqIprs6lJuvr\/GyFWMv\/gjjQZIXMLF6.SY\/geuERO",
         "role": "user"
+    },
+    {
+        "id": 4,
+        "name": "Delete Me",
+        "email": "delete@na-meli.ru",
+        "age": 100000000,
+        "password": "$2y$10$0p.hKZpLT8Bl3SQO0amikeymmaFNqBZ6\/qMiKiM3.JvJrq08pED3S",
+        "role": "user"
     }
 ]

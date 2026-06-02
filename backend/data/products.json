@@ -7,7 +7,7 @@
         "material": "дерево",
         "purpose": null,
         "price": 1250,
-        "inStock": true,
+        "inStock": false,
         "image": "УпрямыйДуб.jpg"
     },
     {

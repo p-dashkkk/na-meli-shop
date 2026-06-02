@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Администратор",
+        "email": "admin@na-meli.ru",
+        "age": null,
+        "password": "$2y$10$sj7BJ7\/1ryAcz7rV2VQck.QT0pbTDxMDMDtRjTuoyAft.5jAWeSq2",
+        "role": "admin"
+    },
+    {
+        "id": 2,
+        "name": "Dasha",
+        "email": "Dasha@na-meli.ru",
+        "age": 19,
+        "password": "$2y$10$GIQjw\/ApKsXcwnsZi7T\/D.jiO4EvEj1ghEYieWOzu8ZnKGcaqkqdK",
+        "role": "user"
+    },
+    {
+        "id": 3,
+        "name": "Аня",
+        "email": "anna.v.2026@test.ru",
+        "age": null,
+        "password": "$2y$10$psW5diuR9l1WTqIprs6lJuvr\/GyFWMv\/gjjQZIXMLF6.SY\/geuERO",
+        "role": "user"
+    }
+]

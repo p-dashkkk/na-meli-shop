@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^api/(.*)$ api/index.php [QSA,L]
+<FilesMatch "\.(jpg|jpeg|png|gif|css|js|html)$">
+    Allow from all
+</FilesMatch>

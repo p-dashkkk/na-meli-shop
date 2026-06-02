@@ -1,0 +1,11 @@
+[2026-06-02 16:07:29] LOGIN | User: admin@na-meli.ru
+[2026-06-02 16:07:36] STOCK_CHANGE | Admin: Администратор; Product ID: 1; New status: false
+[2026-06-02 16:07:37] STOCK_CHANGE | Admin: Администратор; Product ID: 2; New status: false
+[2026-06-02 16:07:42] LOGIN | User: Dasha@na-meli.ru
+[2026-06-02 16:09:00] REGISTER | User: delete@na-meli.ru
+[2026-06-02 16:09:05] LOGIN | User: delete@na-meli.ru
+[2026-06-02 16:09:11] LOGIN | User: admin@na-meli.ru
+[2026-06-02 16:09:16] DELETE_USER | Admin: Администратор; Deleted: delete@na-meli.ru
+[2026-06-02 16:09:30] LOGIN | User: admin@na-meli.ru
+[2026-06-02 16:09:32] STOCK_CHANGE | Admin: Администратор; Product ID: 1; New status: true
+[2026-06-02 16:09:33] STOCK_CHANGE | Admin: Администратор; Product ID: 2; New status: true
